@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require "Faker"
+10.times do
+  Task.create(
+    name: Faker::Job.title,
+    # details: Faker::Job.field,
+    # completed: false
+  )
+end
